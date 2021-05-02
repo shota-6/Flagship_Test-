@@ -1,0 +1,113 @@
+<div class="page-width">
+  <div class="section-header text-center">
+    <h2>
+      {{section.settings.title}}
+    </h2>
+  </div>
+  <ul class="grid grid--uniform grid--view-items">
+    {% for block in section.blocks%}
+
+        {% if block.type == 'text' %}
+            <p style="color: red; font-weight: bold; font-size: 18px;">{{block.settings.block-title}}</p>
+            <p>{{block.settings.block-desc}}</p>
+        {% elsif block.type == 'textarea' %}
+            <p style="color: blue; font-weight: bold; font-size: 18px;">{{block.settings.block-title}}</p>
+            <p>{{block.settings.block-desc}}</p>
+        {% elsif block.type == 'richtext' %}
+            <p style="color: green; font-weight: bold; font-size: 18px;">{{block.settings.block-title}}</p>
+            <p>{{block.settings.block-desc}}</p>
+        {% endif %}
+
+    {% endfor %}
+  </ul>
+</div>
+
+{% schema %}
+  {
+    "name": "news-carousel",
+    "settings": [{
+       "type" : "text",
+       "id"  :  "title",
+       "label": "Title",
+       "default" : "news-carousel"
+    }],
+    "blocks": [
+    {
+      "type" : "text",
+      "name" : "campaign",
+      "settings" : [
+
+      {
+        "type" : "checkbox",
+        "id" : "featured",
+        "label" : "Featured",
+        "default": true
+      },
+      {
+        "type" : "text",
+        "id" : "block-title",
+        "label" : "Title"
+      },
+      {
+        "type" : "textarea",
+        "id" : "block-desc",
+        "label" : "Description"
+      }
+      ]
+    },
+    {
+      "type" : "textarea",
+      "name" : "new-product",
+      "settings" : [
+
+      {
+        "type" : "checkbox",
+        "id" : "featured",
+        "label" : "Featured",
+        "default": true
+      },
+      {
+        "type" : "text",
+        "id" : "block-title",
+        "label" : "Title"
+      },
+      {
+        "type" : "textarea",
+        "id" : "block-desc",
+        "label" : "Description"
+      }
+      ]
+    },
+    {
+      "type" : "richtext",
+      "name" : "news",
+      "settings" : [
+
+      {
+        "type" : "checkbox",
+        "id" : "featured",
+        "label" : "Featured",
+        "default": true
+      },
+      {
+        "type" : "text",
+        "id" : "block-title",
+        "label" : "Title"
+      },
+      {
+        "type" : "textarea",
+        "id" : "block-desc",
+        "label" : "Description"
+      }
+      ]
+    }
+    ],
+    "presets" : [
+      {
+        "name" : "news-carousel",
+        "category" : "information"
+      }
+    ]
+
+  }
+{% endschema %}
