@@ -274,6 +274,30 @@
               {%- endif -%}
             {%- endcapture -%}
             <div class="cart__shipping rte">{{ taxes_shipping_checkout }}</div>
+
+                    <div class="task-a">
+                    <div class="momo-check"  style="display: inline-block;">
+                  
+                        <label for="CartSpecialInstructions" class="cart-note__label small--text-center">
+                          <input type="checkbox">Add instructions
+                        </label>
+                    </div>
+
+                    <div  style="display: none; margin-bottom: 20px" class="grid__item cart-note">
+                        <textarea name="note" id="CartSpecialInstructions" class="cart-note__input" data-cart-notes>{{ cart.note }}</textarea>
+                    </div>
+                </div>
+
+                <script>
+                $(function() {
+                    jQuery('.momo-check').on('click', function() {
+                        jQuery(this).next().slideToggle();
+
+                    })
+                  
+                  });
+                </script>
+
             <div class="cart__buttons-container">
               <div class="cart__submit-controls">
                 {%- unless section.settings.cart_ajax_enable -%}
