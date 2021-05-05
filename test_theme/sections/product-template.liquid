@@ -1,3 +1,60 @@
+<!-- layer_board -->
+<div id="layer_board_area">
+	<div class="layer_board_bg"></div>
+	<div class="layer_board">
+		<div class="modal-inner">
+
+      <div class="modal-info">
+
+        <div id="variant-inventory">
+         <h2 class="item-h2">Item Status</h2>
+        {% if product.variants.first.inventory_management == "shopify" and product.variants.first.inventory_quantity > 0 %}
+        <p class="stock-p">We currently have <span style="font-weight:bold; font-size:20px; color:blue;">{{ product.variants.first.inventory_quantity }}</span> in stock.</p>
+        {% else %}
+          <p class="stock-p">{{product.title}} is sold out</p>
+        {% endif %}
+        </div>
+
+          <h2 class="cart-h2">Cart Status</h2>
+          <table>
+            <thead>
+              <th colspan="4">PRODUCT</th>
+              <th>QUANTITY</th>
+              <th>PRICE</th>
+            </thead>
+            <tbody>
+              {% for item in cart.items %}
+                <tr>
+                  <td colspan="4"> <a href="{{ item.url }}">{{ item.product.title }}</a> </td>
+                  <td>{{ item.quantity }}</td>
+                  <td>{{ item.price | times: item.quantity | money }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+          </table>
+
+          <table  class="total-table">
+            <tbody>
+              <thead>
+                <th>TOTAL QUANTITY</th>
+                <th>TOTAL PRICE</th>
+              </thead>
+                <tr>
+                  <td> {{cart.item_count}} </td>
+                  <td> {{ cart.total_price | money }} </td>
+                </tr>
+            </tbody>
+          </table>
+          
+        </div>
+    <p class="btn_close"><a href="#">close</a></p>
+    </div>
+	</div>
+</div>
+<!-- //layer_board -->
+
+
+
 <div class="product-template__container page-width"
   id="ProductSection-{{ section.id }}"
   data-section-id="{{ section.id }}"
