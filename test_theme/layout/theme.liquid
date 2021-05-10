@@ -162,7 +162,19 @@
     }
   </script>
 
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		{{ 'jquery.cookie.js' | asset_url | script_tag}}
+		{{ 'jquery.layerBoard.js' | asset_url | script_tag}}
+
+<script>
+$(function(){
+ 
+	$('#layer_board_area').layerBoard({alpha:0.5});
+ 
+})
+</script>
+>>>>>>> c
 
   {{ content_for_header }}
 </head>
