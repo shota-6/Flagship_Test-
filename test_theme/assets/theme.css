@@ -6997,18 +6997,3 @@ hr {
 .store-availability-list__phone {
   margin-bottom: 0; }
 
-/* add  */
-
-.product-form__cart-submit{
-  background: green;
-  color: white;
-}
-.btn--secondary-accent:not([disabled]):hover, .btn--secondary-accent:focus {
-  background-color: blue;
-  color: white;
-}
-
-
-.btn[disabled], .shopify-payment-button .shopify-payment-button__button--unbranded[disabled], .btn[aria-disabled], .btn[aria-disabled]:hover, .shopify-payment-button .shopify-payment-button__button--unbranded[aria-disabled]{
-  background: gray;
-}
