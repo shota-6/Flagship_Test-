@@ -6998,6 +6998,7 @@ hr {
   margin-bottom: 0; }
 
 
+
 /* add  */
 
 .product-form__cart-submit{
@@ -7082,7 +7083,7 @@ hr {
     margin-top: 40px;
   }
 
-
-
-
+.meta_value{
+  font-size: 20px;
+}
 
