@@ -3,13 +3,15 @@
     "sections": {
       "header": {
         "type": "header",
-        "settings": {}
-      },
-      "hero-1": {
-        "type": "hero",
         "settings": {
-          "hero_size": "large",
-          "text_size": "large"
+          "align_logo": "left",
+          "logo_max_width": 100,
+          "main_linklist": "main-menu",
+          "message": false,
+          "home_page_only": true,
+          "message_text": "ここで告知してください",
+          "color_bg": "#3a3a3a",
+          "color_text": "#ffffff"
         }
       },
       "feature-row": {
@@ -21,15 +23,30 @@
         "blocks": {
           "feature-columns-0": {
             "type": "text_block",
-            "settings": {}
+            "settings": {
+              "enable_image": true,
+              "title": "タイトルまたはキャッチコピーを追加する",
+              "text": "<p>ブログ記事、商品、またはプロモーションをお客様に伝えます。このテキストで商品について説明し、出品状況やスタイルの詳細を共有するか、最近のレビューやFAQを表示するスペースとして使用します。<\/p>",
+              "button_label": ""
+            }
           },
           "feature-columns-1": {
             "type": "text_block",
-            "settings": {}
+            "settings": {
+              "enable_image": true,
+              "title": "タイトルまたはキャッチコピーを追加する",
+              "text": "<p>ブログ記事、商品、またはプロモーションをお客様に伝えます。このテキストで商品について説明し、出品状況やスタイルの詳細を共有するか、最近のレビューやFAQを表示するスペースとして使用します。<\/p>",
+              "button_label": ""
+            }
           },
           "feature-columns-2": {
             "type": "text_block",
-            "settings": {}
+            "settings": {
+              "enable_image": true,
+              "title": "タイトルまたはキャッチコピーを追加する",
+              "text": "<p>ブログ記事、商品、またはプロモーションをお客様に伝えます。このテキストで商品について説明し、出品状況やスタイルの詳細を共有するか、最近のレビューやFAQを表示するスペースとして使用します。<\/p>",
+              "button_label": ""
+            }
           }
         },
         "block_order": [
@@ -38,19 +55,19 @@
           "feature-columns-2"
         ],
         "settings": {
-          "title": ""
+          "title": "",
+          "align_text": "left"
         }
       },
       "collection": {
         "type": "collection",
         "settings": {
-          "grid": 4
-        }
-      },
-      "hero-2": {
-        "type": "hero",
-        "settings": {
-          "text_size": "large"
+          "title": "特集コレクション",
+          "collection": "",
+          "grid": 4,
+          "rows": 2,
+          "show_vendor": false,
+          "show_view_all": false
         }
       },
       "quotes": {
@@ -58,15 +75,24 @@
         "blocks": {
           "quotes-0": {
             "type": "quote",
-            "settings": {}
+            "settings": {
+              "quote": "<p>あなたのストアの幸せなお客様を紹介するために、カスタマーレビューとお客様の声を追加してください。<\/p>",
+              "author": "筆者の名前"
+            }
           },
           "quotes-1": {
             "type": "quote",
-            "settings": {}
+            "settings": {
+              "quote": "<p>あなたのストアの幸せなお客様を紹介するために、カスタマーレビューとお客様の声を追加してください。<\/p>",
+              "author": "筆者の名前"
+            }
           },
           "quotes-2": {
             "type": "quote",
-            "settings": {}
+            "settings": {
+              "quote": "<p>あなたのストアの幸せなお客様を紹介するために、カスタマーレビューとお客様の声を追加してください。<\/p>",
+              "author": "筆者の名前"
+            }
           }
         },
         "block_order": [
@@ -83,15 +109,24 @@
         "blocks": {
           "image-bar-0": {
             "type": "image",
-            "settings": {}
+            "settings": {
+              "alignment": "center",
+              "cta_label": ""
+            }
           },
           "image-bar-1": {
             "type": "image",
-            "settings": {}
+            "settings": {
+              "alignment": "center",
+              "cta_label": ""
+            }
           },
           "image-bar-2": {
             "type": "image",
-            "settings": {}
+            "settings": {
+              "alignment": "center",
+              "cta_label": ""
+            }
           }
         },
         "block_order": [
@@ -99,37 +134,92 @@
           "image-bar-1",
           "image-bar-2"
         ],
-        "settings": {}
+        "settings": {
+          "section_height": "medium"
+        }
       },
       "footer": {
         "type": "footer",
+        "settings": {
+          "show_payment_icons": false,
+          "color_footer_bg": "#f6f6f6",
+          "color_footer_text": "#333232",
+          "show_locale_selector": true,
+          "show_currency_selector": true
+        }
+      },
+      "collection-template": {
+        "type": "collection-template",
+        "settings": {
+          "layout": "grid",
+          "grid": 4,
+          "rows": 2,
+          "show_collection_image": true,
+          "show_vendor": false,
+          "sort_enable": true,
+          "tags_enable": true
+        }
+      },
+      "product-template": {
+        "type": "product-template",
+        "settings": {
+          "show_quantity_selector": false,
+          "show_vendor": false,
+          "enable_payment_button": true,
+          "show_share_buttons": false,
+          "media_size": "medium",
+          "enable_image_zoom": true,
+          "enable_video_looping": false
+        }
+      },
+      "product-recommendations": {
+        "type": "product-recommendations",
+        "settings": {
+          "show_product_recommendations": false,
+          "heading": "あなたへのおすすめ",
+          "show_vendor": false
+        }
+      },
+      "16206404466e6caeed": {
+        "type": "news-carousel",
         "blocks": {
-          "footer-0": {
-            "type": "link_list",
-            "settings": {}
+          "894f18c6-8079-448f-8798-7a46450fde95": {
+            "type": "text",
+            "settings": {
+              "featured": true,
+              "block-title": "campaign",
+              "block-desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cill"
+            }
           },
-          "footer-1": {
-            "type": "newsletter",
-            "settings": {}
+          "7ecac2a1-ee83-4329-b57e-14ca234e76d6": {
+            "type": "textarea",
+            "settings": {
+              "featured": true,
+              "block-title": "new-product",
+              "block-desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cill"
+            }
+          },
+          "9ed9f332-039f-4060-b2a3-3badccd9b23a": {
+            "type": "richtext",
+            "settings": {
+              "featured": true,
+              "block-title": "news",
+              "block-desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cill"
+            }
           }
         },
         "block_order": [
-          "footer-0",
-          "footer-1"
+          "894f18c6-8079-448f-8798-7a46450fde95",
+          "7ecac2a1-ee83-4329-b57e-14ca234e76d6",
+          "9ed9f332-039f-4060-b2a3-3badccd9b23a"
         ],
         "settings": {
-          "show_payment_icons": true
+          "title": "news-carousel"
         }
       }
     },
     "content_for_index": [
-      "hero-1",
-      "feature-row",
-      "feature-columns",
-      "collection",
-      "hero-2",
-      "quotes",
-      "image-bar"
+      "16206404466e6caeed"
     ]
   },
   "presets": {
