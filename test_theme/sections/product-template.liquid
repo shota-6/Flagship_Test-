@@ -273,6 +273,22 @@
           {{ product.description }}
         </div>
 
+
+        {% assign global = product.metafields.global %}
+        {% assign key = 'test' %}
+        
+        {%- if product.metafields.global != blank -%}
+        <ul>
+          <li class="meta_value">metafield value : {{ global[key] | plus: 1 }}</li>
+        </ul>
+        {%- endif -%}
+
+        {%- if product.metafields.global == empty -%}
+        <ul>
+          <li class="meta_value">metafield value : 0</li>
+        </ul>
+        {%- endif -%}
+
         {% if section.settings.show_share_buttons %}
           {% include 'social-sharing', share_title: product.title, share_permalink: product.url, share_image: product.featured_media %}
         {% endif %}
