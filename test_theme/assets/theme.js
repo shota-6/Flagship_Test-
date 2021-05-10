@@ -8022,7 +8022,7 @@ theme.Product = (function() {
     this._stringOverrides();
     this._initVariants();
     this._initMediaSwitch();
-    this._initAddToCart();
+    // this._initAddToCart();
     this._setActiveThumbnail();
     this._initProductVideo();
     this._initModelViewerLibraries();
